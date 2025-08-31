@@ -34,9 +34,10 @@ def test_login_wrong_password():
         else:
             print("Unexpected error message:", error_message)
     except Exception as e:
-        print("Login Failure Test Failed:", e)
+        print("Login Wrong Password Test Failed:", e)
     finally:
         driver.close()
+        driver.quit()
 
 if __name__ == "__main__":
     test_login_success()
